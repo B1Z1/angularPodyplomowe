@@ -1,0 +1,20 @@
+<!-- :Module App Start: -->
+<div class="m-app">
+
+    <!-- :Module Intro Start: -->
+    <app-intro 
+        [userName]="userName"
+        [title]="appTitle"
+        *ngIf="!gameStarted"></app-intro>
+    <!-- :Module Intro End: -->
+
+    <!-- :Module Main Start: -->
+    <app-main *ngIf="gameStarted"></app-main>
+    <!-- :Module Main End: -->
+
+    <button 
+        class="m-app__button"
+        (click)="startGame()">{{getText()}}</button>
+
+</div>
+<!-- :Module App End: -->

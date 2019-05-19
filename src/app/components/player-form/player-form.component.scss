@@ -1,0 +1,26 @@
+/*________________
+
+Component Player Form Start
+__________*/
+
+.c-player-form{
+    position: relative;
+    width: 50%;
+    margin-top: 64px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* ---> :Components of component: <--- */
+.c-player-form{
+    &__input{
+        width: 100%;
+        margin-bottom: 16px;
+        padding-top: 16px;
+        padding-right: 16px;
+        padding-bottom: 16px;
+        padding-left: 16px;
+        border: 1px solid gray;
+        outline: none;
+    }
+}
