@@ -1,2 +1,30 @@
-Hey
-<button (click)="submit()">End Game</button>
+<!-- : Game Component : -->
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            1 of 3
+        </div>
+        <div class="col">
+            <tetris-core #game
+                (lineCleared)="onLineCleared()"></tetris-core>
+        </div>
+        <div class="col">
+            3 of 3
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">`
+            1 of 3
+        </div>
+        <div class="col">
+            <app-game-controllers
+                [game]="game">
+            </app-game-controllers>
+        </div>
+        <div class="col">
+            3 of 3
+        </div>
+    </div>
+    <button (click)="submit()">End Game</button>
+</div>
