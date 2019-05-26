@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { IntroModule } from './intro/intro.module';
-import { MainModule } from './main/main.module';
+import { IntroModule } from './modules/intro/intro.module';
+import { MainModule } from './modules/main/main.module';
 
 @NgModule({
   declarations: [

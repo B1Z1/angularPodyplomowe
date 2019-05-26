@@ -10,6 +10,10 @@ export class PlayerFormComponent implements OnInit {
   surname = '';
   constructor() { }
 
+  validate(ev){
+    console.log(this.name, this.surname);
+  }
+
   ngOnInit() {
   }
 
