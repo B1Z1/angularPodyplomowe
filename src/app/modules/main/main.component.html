@@ -1,8 +1,10 @@
 <!-- :Main Module Start: -->
 <div class="m-main">
-
+    <h1>Hejka {{userName}} {{userSurname}}</h1>
     <!-- :Game Component Start: -->
-    <app-game></app-game>
+    <app-game
+        (close)="endGame()">
+    </app-game>
     <!-- :Game Component End: -->
     
 </div>

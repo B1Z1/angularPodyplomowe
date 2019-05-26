@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-player-form',
@@ -6,12 +6,20 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./player-form.component.scss']
 })
 export class PlayerFormComponent implements OnInit {
-  name = '';
-  surname = '';
+  @Input() 
+    name = '';
+  @Input() 
+    surname = '';
+  @Output() 
+    submit = new EventEmitter();
+    
   constructor() { }
 
-  validate(ev){
-    console.log(this.name, this.surname);
+  submitForm(){
+    this.submit.emit({
+      name: this.name,
+      surname: this.surname
+    })
   }
 
   ngOnInit() {

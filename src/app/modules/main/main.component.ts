@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -6,7 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-  constructor() { }
+  @Input()
+    userName = '';
+  @Input()
+    userSurname = '';
+
+  @Output() 
+    endGameApp = new EventEmitter();
+
+  endGame(){
+    this.endGameApp.emit();
+  }
 
   ngOnInit() {
   }

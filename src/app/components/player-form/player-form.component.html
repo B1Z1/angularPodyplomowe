@@ -1,6 +1,37 @@
 <!-- :This is the form Component: -->
-<form class="c-player-form">
-  <input class="c-player-form__input" type="text" [value]="name" placeholder="Wpisz swoje imię">
-  <input class="c-player-form__input" type="text" [value]="surname" placeholder="Wpisz swoje nazwisko">
-  <button>Zacznij grę</button>
+<!--
+
+#nameEl           -> Oznacza odniesienie do danego obiektu
+#nameEl="ngModel" -> Oznacza odniesienie do modelu ngModel
+#nameEl="ngForm"  -> Oznacza odniesienie do obiektu formy
+
+[(ngModel)] -> jest to reaktywne odniesienie do zmiennej
+               Walidacja formy jest odrazu zrobiona przez Angular, więc
+               możemy tylko odnosić się do classów zrobionych przez dany
+               framework 
+
+
+-->
+<form 
+	class="c-player-form"
+	#form="ngForm">
+
+	<input [(ngModel)]="name"
+			class="c-player-form__input"
+			type="text"
+			name="name"
+			required
+			minlength="3"
+			placeholder="Wpisz swoje imię">
+	<input [(ngModel)]="surname"
+			class="c-player-form__input"
+			type="text"
+			name="surname"
+			required
+			minlength="3"
+			placeholder="Wpisz swoje nazwisko">
+	<button (click)="submitForm()"
+			[disabled]="form.valid === false">
+			Submit</button>
+			
 </form>

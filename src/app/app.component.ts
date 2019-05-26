@@ -13,12 +13,21 @@ export class AppComponent {
   userName = '';
   userSurname = '';
 
-  startGame(){
-    this.gameStarted = !this.gameStarted;
+  constructor(){
+    this.startGame({
+      name: 'Illya',
+      surname: 'Mishkin'
+    })
   }
 
-  getText(){
-    return !this.gameStarted ? 'Zacznij grę':'Skończ grę';
+  startGame(data){
+    this.userName = data.name;
+    this.userSurname = data.surname;
+    this.gameStarted = true;
+  }
+
+  endGame(){
+    this.gameStarted = false;
   }
 
 }

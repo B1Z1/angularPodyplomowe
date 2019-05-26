@@ -4,6 +4,9 @@
 
   <!-- :Component Player Form Start Start: -->
   <app-player-form
+    [name] = "userName"
+    [surname] = "userSurname"
+    (submit) = "startGame($event)"
     ></app-player-form>
   <!-- :Component Player Form Start End: -->
 

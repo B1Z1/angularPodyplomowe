@@ -4,12 +4,19 @@
     <!-- :Module Intro Start: -->
     <app-intro 
         [userName]="userName"
+        [userSurname]="userSurname"
         [title]="appTitle"
+        (appStartGame) = "startGame($event)"
         *ngIf="!gameStarted"></app-intro>
     <!-- :Module Intro End: -->
 
     <!-- :Module Main Start: -->
-    <app-main *ngIf="gameStarted"></app-main>
+    <app-main 
+        *ngIf="gameStarted"
+        [userName]="userName"
+        [userSurname]="userSurname"
+        (endGameApp)="endGame()">
+    </app-main>
     <!-- :Module Main End: -->
 
 </div>

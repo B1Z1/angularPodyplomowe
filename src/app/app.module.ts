@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { IntroModule } from './modules/intro/intro.module';
 import { MainModule } from './modules/main/main.module';
-
+ 
 @NgModule({
   declarations: [
     AppComponent
